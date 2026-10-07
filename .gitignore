@@ -1,0 +1,5 @@
+.env
+node_modules/
+*.backup.json
+dist
+spec.md

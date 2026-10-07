@@ -1,0 +1,20 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-muted: #888888;
+  --color-border: #cccccc;
+  --color-error: #c00000;
+  --color-warn-bg: #fff3b0;
+  --space: 8px;
+  --font-size: 16px;
+}
+
+body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 8px; }
+header { display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding-bottom: 8px; }
+
+.migration {
+  background: var(--color-warn-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space);
+  font-size: var(--font-size);
+}

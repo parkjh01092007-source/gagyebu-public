@@ -1,0 +1,5 @@
+.adjustment { font-size: var(--font-size); color: var(--color-text); }
+.adjustment .error { color: var(--color-error); }
+.adjustment .note { color: var(--color-muted); font-size: 0.85em; }
+.adjustment form { display: flex; flex-wrap: wrap; gap: var(--space); align-items: center; margin: var(--space) 0; }
+.adjustment input { text-align: right; font-variant-numeric: tabular-nums; }

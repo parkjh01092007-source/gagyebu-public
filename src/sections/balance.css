@@ -1,0 +1,29 @@
+/* 残高・クレカ・貯蓄の3画面で共通 */
+.report { font-size: var(--font-size); color: var(--color-text); }
+.report h3 { margin: calc(var(--space) * 2) 0 var(--space); }
+.report .note { color: var(--color-muted); font-size: 0.85em; }
+.report .error, .report .neg { color: var(--color-error); }
+.report .free { font-weight: bold; margin: var(--space) 0; }
+.report .free .note { font-weight: normal; }
+.report table { border-collapse: collapse; width: 100%; }
+.report th, .report td { border-bottom: 1px solid var(--color-border); padding: var(--space); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.report th:first-child, .report td:first-child, .report th.text, .report td.text { text-align: left; }
+.report th { color: var(--color-muted); font-weight: normal; font-size: 0.85em; }
+.report .month-bar { display: flex; gap: var(--space); align-items: center; }
+.report details { margin-top: var(--space); }
+.report summary { cursor: pointer; }
+.report summary h2 { display: inline; }
+.report summary .value { margin-left: var(--space); font-weight: bold; }
+.report tr.total td { font-weight: bold; }
+
+/* 報告書の形の表（P/L、B/S の勘定式） */
+.report table.statement td { white-space: normal; }
+.report table.statement .head, .report table.statement .subtotal, .report table.statement .total { font-weight: bold; }
+.report table.statement tr.item > td:first-child, .report table.statement td.name.item { padding-left: calc(var(--space) * 3); }
+.report table.statement tr.subtotal > td:first-child, .report table.statement td.name.subtotal { padding-left: calc(var(--space) * 2); }
+.report table.statement .none { color: var(--color-muted); }
+.report table.statement tr.total > td { border-top: 1px solid var(--color-text); }
+.report table.statement.bs td.right { border-left: 1px solid var(--color-border); }
+.report .print-title { margin-bottom: var(--space); }
+.report tr.inactive td { color: var(--color-muted); }
+.report tr.inactive td.neg { color: var(--color-error); }

@@ -1,0 +1,8 @@
+.opening { font-size: var(--font-size); color: var(--color-text); }
+.opening h3 { margin: calc(var(--space) * 2) 0 var(--space); }
+.opening .error { color: var(--color-error); }
+.opening .note { color: var(--color-muted); font-size: 0.85em; }
+.opening form { display: flex; flex-direction: column; gap: var(--space); align-items: flex-start; }
+.opening section { width: 100%; }
+.opening .row { display: grid; grid-template-columns: 12em 10em auto; column-gap: var(--space); align-items: center; padding: var(--space) 0; border-bottom: 1px solid var(--color-border); }
+.opening .row input { text-align: right; font-variant-numeric: tabular-nums; }

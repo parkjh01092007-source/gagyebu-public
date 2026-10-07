@@ -1,0 +1,28 @@
+.entries { font-size: var(--font-size); color: var(--color-text); --cols: 2.5em 9em 9em 6em 1fr 9em; }
+.entries form { display: flex; gap: var(--space); flex-wrap: wrap; align-items: center; margin-bottom: var(--space); }
+.entries .error { color: var(--color-error); }
+
+/* 新しい選択ボックス（base-select）に対応したブラウザだけ、項目の間に線を引く。非対応ブラウザは従来のまま */
+@supports (appearance: base-select) {
+  .entries select,
+  .entries select::picker(select) { appearance: base-select; }
+  .entries select::picker(select) { background: var(--color-bg); border: 1px solid var(--color-border); }
+  .entries select option { border-bottom: 1px solid var(--color-border); }
+}
+.entries ul, .entries ol { list-style: none; padding: 0; margin: var(--space) 0 0; }
+.entries li { border: 1px solid var(--color-border); padding: var(--space); margin-bottom: var(--space); }
+.entries li form { margin-bottom: 0; }
+.entries .note { color: var(--color-muted); font-size: 0.85em; }
+
+.entries .day { border: 1px solid var(--color-border); padding: var(--space); margin-top: var(--space); }
+.entries .day h3 { margin: 0 0 var(--space); font-size: var(--font-size); }
+.entries .day li { border: 0; border-bottom: 1px solid var(--color-border); margin-bottom: 0; }
+.entries .day li:last-child { border-bottom: 0; }
+
+/* 列をそろえた一覧。見出しと全行が同じ --cols を使う */
+.entries .head, .entries .day li.row { display: grid; grid-template-columns: var(--cols); column-gap: var(--space); align-items: center; }
+.entries .head { color: var(--color-muted); padding: 0 var(--space); } /* 左右の余白は行（li）と同じ */
+.entries .head > span { font-size: 0.85em; } /* 列幅はem指定なので、文字を小さくするのは中身だけ（.head自体は行と同じ文字の大きさ）*/
+.entries .cell { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.entries .debit { border-right: 1px solid var(--color-border); padding-right: var(--space); }
+.entries .amount { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
